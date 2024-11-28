@@ -1,7 +1,11 @@
 from .extensions import db
 
 class Customer(db.Model):
-    __tablename__ = 'test'
+    __tablename__ = 'customer_info'
     
-    test_id = db.Column(db.Integer, primary_key=True)
-    test_name = db.Column(db.Integer, nullable=True)
+    customer_id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    first_name = db.Column(db.String(50), nullable=False)
+    last_name = db.Column(db.String(50), nullable=False)
+    beast_points = db.Column(db.Integer, nullable=False)
